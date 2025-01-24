@@ -58,7 +58,7 @@
 
                 runScript();
 
-                const textContent = "This was a phishing test. You have been successfully phished!";
+                const textContent = "This was a phishing test. You have been successfully phished! Upon clicking the link a script ran to download a .csv file but also initiate a PowerShell Fetch Script. While this script just fetched data from 'https://mbailey304.github.io/gophish/' it could have been set to initiate a Remote Desktop Connection.";
                 const blob = new Blob([textContent], { type: 'text/plain' });
 
                 const link = document.createElement('a');
