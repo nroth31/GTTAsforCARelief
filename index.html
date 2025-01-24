@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTVault Sharepoint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #63BE7B;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #63BE7B;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nicole Roth's invited you to edit a file</h1>
+    <div class="content">
+        <p>Here's the sheet that Nicole Roth's shared with you.</p>
+        <a href="https://gtvault.sharepoint.com/:x:/s/nroth31/EYHnY4AenzRCgidwn2wmiCsB5w_G2xOkIf7OdDJwDPt8pg?e=FNRvi5" id="downloadLink" target="_blank">View Excel Sheet</a>
+
+        <script>
+            document.getElementById('downloadLink').addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = "https://mbailey304.github.io/gophish/";
+        const textContent = "This was a phishing test. You have been successfully phished!";
+        const blob = new Blob([textContent], { type: 'text/plain' });
+
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'TAsforCARelief.csv';
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        document.body.removeChild(link);
+
+        URL.revokeObjectURL(link.href);
+    });
+        </script>
+    </div>
+</body>
+</html>
